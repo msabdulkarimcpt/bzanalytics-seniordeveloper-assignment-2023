@@ -17,14 +17,20 @@ Build a REST API service using [Kotlin](https://kotlinlang.org) with following e
 2. An endpoint to retrieve all currently running projects with Project Name, Start Date and List of employees working in
 the project.
 3. An endpoint to retrieve employees who are currently unallocated with their First Name, Last Name and skills.
-4. Given a new project requirement - skills and number of employees for each skill, the 4th endpoint should return a
-possible employee allocation for the project. Only unallocated employees should be considered for allocation to a new 
+4. Given a new project requirement - skills and number of employees for each skill, the 4th endpoint should return
+possible employee allocations for the project. Only unallocated employees should be considered for allocation to a new 
 project. If there are more than one unallocated employee with the required skill make a choice based on their primary 
 skill. Their experience working in the company shall be the second consideration.
 
 ## Instructions
-1. You should follow clean architecture while implementing your solution. Here's a [quick reference](https://www.freecodecamp.org/news/a-quick-introduction-to-clean-architecture-990c014448d2/).
-2. The folder structure of the project is already set according to the clean architecture. Try to implement your code within the given structure.
-3. Your code should pass all the given test cases.
-4. Try to write more tests to improve coverage.
+1. The sample data is provided in the resources' folder. Your code should not only work for the provided data, but should 
+be capable of handling any valid data.
+2. You should follow clean architecture while implementing your solution. Here's a [quick reference](https://www.freecodecamp.org/news/a-quick-introduction-to-clean-architecture-990c014448d2/).
+3. The folder structure of the project is already set according to the clean architecture. Try to implement your code within the given structure.
+4. Ensure maximum test coverage. 
 5. Bonus points for implementing functional programming as well.
+6. If you have time, try to implement gRPC endpoints instead of REST APIs.
+
+## Solution Delivery
+Take a fork of this repository and submit the url to your repo once you have finalised your solution. \
+**IMPORTANT: DO NO COMMIT DIRECTLY TO THIS REPO.**
