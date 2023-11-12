@@ -1,4 +1,7 @@
 package ai.BzAnalytics.entities
+
+import kotlinx.serialization.Serializable
+
 /**
  * A model for an employee
  * @param id Employee id (Unique)
@@ -9,13 +12,17 @@ package ai.BzAnalytics.entities
  * @param project The project the employee is currently working in, could be NULL if unallocated.
  * @param experience Work experience of the employee within the company in months.
  */
+
+@Serializable
 data class Employee(
     val id: Int,
     val firstName: String,
     val lastName: String,
     val primarySkill: Technology,
-    val secondarySkill: Technology,
-    val project: Project,
-    val experience: Int
+    val secondarySkill: Technology?,
+    val project: Project?,
+    val startDate : String,
+    val endDate : String,
+    //val experience: Int
 ) {
 }
