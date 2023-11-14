@@ -15,24 +15,17 @@ fun Application.configureRouting() {
 
     routing {
         get("/") {
-            call.respondText("""{"message": "The API successfully recognized you as an admin."}""", contentType = ContentType.Application.Json)
+            call.respondText("<html><body><h3>Task</h3>Build a REST API service using Kotlin with following endpoints.<ol><li><a href='/employees'>An endpoint to get a list of current employees with First Name, Last Name, Current Project and Experience in months.</a></li>" +
+            "<li>An endpoint to retrieve all currently running projects with Project Name, Start Date and List of employees working in the project.</li>" +
+            "<li>An endpoint to retrieve employees who are currently unallocated with their First Name, Last Name and skills.</li>" +
+            "<li>Given a new project requirement - skills and number of employees for each skill, the 4th endpoint should return possible employee allocations for the project. Only unallocated employees should be considered for allocation to a new project." +
+                    " If there are more than one unallocated employee with the required skill make a choice based on their primary skill. Their experience working in the company shall be the second consideration.</li></ol></body></html>", contentType = ContentType.Text.Html)
         }
     }
 
     routing {
         get("/employees") {
-            //println(repositoryImpl.getAllEmployees())
             call.respond(repositoryImpl.getAllEmployees())
-            //call.respondText("Hello Hello World!")
-            //val myMap = mutableMapOf<Int, Technology>()
-            //myMap[1]= Technology(1,"ABC")
-            //myMap[2]= Technology(2,"DEF")
-            //myMap[3]= Technology(3,"GHI")
-            //val abc = Technology(3,"KLM")
-            //val jsonString = Json.encodeToString(abc)
-            //call.respond(myMap)
-
-
         }
     }
 

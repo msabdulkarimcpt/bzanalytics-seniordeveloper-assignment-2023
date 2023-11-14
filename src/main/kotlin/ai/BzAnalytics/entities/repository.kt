@@ -9,6 +9,7 @@ import kotlinx.serialization.Serializable
 sealed interface Repository {
     //fun getAllTechnologies(): Map<Int, Technology>
     fun getAllEmployees(): Map<Int, Employee>
+    //fun getAllCurrentEmployees(): Map<Int, Employee>
     //fun getAllProjects(): Map<Int, Project>
 
 }
@@ -25,6 +26,10 @@ class RepositoryImpl : Repository {
     override fun getAllEmployees(): Map<Int, Employee> {
         return employeeService.getAllEmployees()
     }
+
+    //override fun getAllCurrentEmployees(): Map<Int, Employee> {
+    //    return employeeService.getAllCurrentEmployees()
+    //}
 
     //override fun getAllProjects(): Map<Int, Project> {
     //    return projectService.getAllProjects()

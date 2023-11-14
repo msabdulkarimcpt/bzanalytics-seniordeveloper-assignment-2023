@@ -21,8 +21,6 @@ data class Employee(
     val primarySkill: Technology,
     val secondarySkill: Technology?,
     val project: Project?,
-    val startDate : String,
-    val endDate : String,
-    //val experience: Int
+    val experience: Int
 ) {
 }

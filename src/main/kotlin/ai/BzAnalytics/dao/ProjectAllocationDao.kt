@@ -2,12 +2,13 @@ package ai.BzAnalytics.dao
 
 import ai.BzAnalytics.dao.Employee
 import org.jetbrains.exposed.dao.id.IntIdTable
+import org.jetbrains.exposed.sql.Table
 
-object ProjectAllocation : IntIdTable() {
-    val employee = integer("EmployeeId").references(Employee.id)
-    val project = integer("ProjectId").references(Project.id)
+object ProjectAllocation : Table() {
+    val employee = integer("EmployeeId").references(Employee.employeeId)
+    val project = integer("ProjectId").references(Project.projectId)
     val startMonth = integer("startMonth")
-    val endMonth = integer("startMonth")
-    val startYear = integer("startMonth")
-    val endYear = integer("startMonth")
+    val startYear = integer("startYear")
+    val endMonth = integer("endMonth").nullable()
+    val endYear = integer("endYear").nullable()
 }

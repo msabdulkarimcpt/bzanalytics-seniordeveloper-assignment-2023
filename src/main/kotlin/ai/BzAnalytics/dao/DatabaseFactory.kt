@@ -27,7 +27,8 @@ object DatabaseFactory {
         )
 
         transaction {
-            SchemaUtils.create(Employee)
+            SchemaUtils.create(Employee,Project,ProjectAllocation,Technology)
+
         }
     }
 }
