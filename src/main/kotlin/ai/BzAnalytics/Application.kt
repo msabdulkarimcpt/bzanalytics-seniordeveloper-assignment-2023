@@ -1,8 +1,6 @@
 package ai.BzAnalytics
 
 import ai.BzAnalytics.dao.DatabaseFactory
-import ai.BzAnalytics.entities.Repository
-import ai.BzAnalytics.entities.RepositoryImpl
 import ai.BzAnalytics.plugins.*
 import io.ktor.http.*
 import io.ktor.server.application.*

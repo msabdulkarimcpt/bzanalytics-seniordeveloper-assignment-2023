@@ -15,3 +15,12 @@ data class Project (
     //val allocations: List<ProjectAllocation>
 ) {
 }
+
+@Serializable
+data class ProjectCurrent (
+    val id: Int,
+    val name: String,
+    val startDate: String,
+    val employees: List<EmployeeTemp>
+) {
+}

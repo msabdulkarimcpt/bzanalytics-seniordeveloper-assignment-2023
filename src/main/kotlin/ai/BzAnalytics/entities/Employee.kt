@@ -24,3 +24,32 @@ data class Employee(
     val experience: Int
 ) {
 }
+
+@Serializable
+data class EmployeeCurrent(
+    val id: Int,
+    val firstName: String,
+    val lastName: String,
+    val project: Project?,
+    val experience: Int
+) {
+}
+
+@Serializable
+data class EmployeeUnAllocated(
+    val id: Int,
+    val firstName: String,
+    val lastName: String,
+    val primarySkill: Technology,
+    val secondarySkill: Technology?,
+    val experience: Int
+) {
+}
+
+@Serializable
+data class EmployeeTemp(
+    val id: Int,
+    val firstName: String,
+    val lastName: String
+) {
+}

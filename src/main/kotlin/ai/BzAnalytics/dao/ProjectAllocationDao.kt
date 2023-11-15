@@ -1,7 +1,5 @@
 package ai.BzAnalytics.dao
 
-import ai.BzAnalytics.dao.Employee
-import org.jetbrains.exposed.dao.id.IntIdTable
 import org.jetbrains.exposed.sql.Table
 
 object ProjectAllocation : Table() {
